@@ -379,7 +379,11 @@ input:checked + .slider:before {
 .landingComponent {
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-image: url(/src/img/landing_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,12 +395,7 @@ input:checked + .slider:before {
     flex-direction: column;
     height: 100vh; }
   .landingComponent .landingLeft {
-    width: 60%;
-    background-image: url(/src/img/landing_img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%; }
+    width: 60%; }
   .landingComponent .landingRight {
     width: 40%; }
     .landingComponent .landingRight .registerLanding {

@@ -17,14 +17,7 @@ const Landing = (props) => {
 
     return (
         <div className="landingComponent">
-            <div className="landingContainers landingLeft">
-            <div className="slogan top">
-                    <p>FIND YOUR HOBBY</p>
-                </div>
-                <div className="slogan bottom">
-                    <p>CONNECT WITH PEOPLE</p>
-                </div>
-            </div>
+            <div className="landingContainers landingLeft"></div>
             <div className="landingContainers landingRight">
                 <div className="spacer"></div>
                 <div className="spacer"></div>
