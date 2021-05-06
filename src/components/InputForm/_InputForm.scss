@@ -1,0 +1,57 @@
+.inputComponent{
+    width: 100%;
+    margin-right: 2rem;
+    .error {
+      color: red;
+      position: relative;
+      bottom: 4rem;
+      font-size: 11px;
+      font-style: italic;
+      transition: 0.2s ease all;
+    }
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+    left: 15px;
+    bottom: 45px;
+    font-size: 11px;
+    opacity: 1;
+    color: $fontcolor3;
+    
+}
+
+.inputText {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: $br;
+  border: 1px solid #ccc;
+  background-color: $backgroundWhite;
+}
+
+.floating-label {
+  position: relative;
+  pointer-events: none;
+  left: 20px;
+  bottom: 30px;
+  transition: 0.2s ease all;
+  color: $fontcolor3;
+}
+
+.iconInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3.8rem;
+  position: relative;
+  bottom: 70px;
+  border-radius: $br;
+  left: 90%;
+}
+
+.spacerCorrector{
+  height: 3.8rem;
+}

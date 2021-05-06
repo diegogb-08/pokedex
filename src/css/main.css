@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 html {
   line-height: 1.15;
@@ -375,6 +376,156 @@ input:checked + .slider:before {
   font-family: "Rajdhani", sans-serif;
   width: 100%; }
 
-@impor /*Fonts and another urls*/
+.landingComponent {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  .landingComponent .landingContainers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; }
+  .landingComponent .landingLeft {
+    width: 60%;
+    background-image: url(/src/img/landing_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%; }
+  .landingComponent .landingRight {
+    width: 40%; }
+    .landingComponent .landingRight .registerLanding {
+      background-color: #ffffff;
+      border: 1px solid #dbdbdb;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 10%;
+      margin-top: 0.5rem; }
+      .landingComponent .landingRight .registerLanding .register {
+        margin-left: 1rem;
+        font-weight: bold;
+        color: #f05356;
+        cursor: pointer; }
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@media screen and (max-width: 900px) {
+  .landingsComponent {
+    flex-direction: column-reverse; }
+  .landingLeft {
+    width: 100%; }
+  .landingRight {
+    width: 100%; } }
+
+.inputComponent {
+  width: 100%;
+  margin-right: 2rem; }
+  .inputComponent .error {
+    color: red;
+    position: relative;
+    bottom: 4rem;
+    font-size: 11px;
+    font-style: italic;
+    transition: 0.2s ease all; }
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  left: 15px;
+  bottom: 45px;
+  font-size: 11px;
+  opacity: 1;
+  color: #7c7578; }
+
+.inputText {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 0.3em;
+  border: 1px solid #ccc;
+  background-color: #fafafa; }
+
+.floating-label {
+  position: relative;
+  pointer-events: none;
+  left: 20px;
+  bottom: 30px;
+  transition: 0.2s ease all;
+  color: #7c7578; }
+
+.iconInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3.8rem;
+  position: relative;
+  bottom: 70px;
+  border-radius: 0.3em;
+  left: 90%; }
+
+.spacerCorrector {
+  height: 3.8rem; }
+
+.loginComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 65%;
+  font-family: "Caveat", cursive;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb; }
+  .loginComponent h2 {
+    width: 15rem;
+    text-align: center;
+    border-bottom: 1.5px solid #333333;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-size: 2.5rem; }
+    .loginComponent h2 span {
+      background-color: #ffffff;
+      padding: 0 10px; }
+
+.loginContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rajdhani", sans-serif; }
+
+.loginInput {
+  width: 70%;
+  height: 2.5rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; }
+
+.buttonLogin {
+  margin-left: 0.5rem;
+  font-weight: bold; }
+  .buttonLogin p {
+    color: white; }
+
+.buttonComponent {
+  background-color: #e41619;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.3em;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer; }
+
+/*Fonts and another urls*/

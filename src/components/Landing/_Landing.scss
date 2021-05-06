@@ -3,6 +3,9 @@
     height: 100%;
     background-color: $backgroundWhite;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     .landingContainers{
         display: flex;
         justify-content: center;

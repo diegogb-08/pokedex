@@ -1,0 +1,50 @@
+.loginComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 65%;
+    font-family: $fontStyle;
+    color: $fontcolor1;
+    background-color: $white1;
+    border: $border1;
+    h2 {
+        width: 15rem; 
+        text-align: center; 
+        border-bottom: 1.5px solid $fontcolor1; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+        font-size: 2.5rem;
+        span { 
+            background-color: $white1;
+            padding:0 10px; 
+        }
+    }
+}
+
+.loginContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontCasual;
+}
+
+.loginInput {
+    width: 70%;
+    height: 2.5rem;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttonLogin{
+    margin-left: 0.5rem;
+    font-weight: bold;
+    p{
+        color: white;
+
+    }
+}
