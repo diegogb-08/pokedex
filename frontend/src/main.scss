@@ -7,7 +7,11 @@
 /*Components and main views*/
 
 @import './App.scss';
-@import './components/Landing/Landing.scss';
+@import './components/Landing/Landing';
+@import './components/InputForm/InputForm.scss';
+@import './components/Login/Login.scss';
+@import './components/Register/Register.scss';
+@import './components/Button/Button.scss';
 
 
 /*Fonts and another urls*/
