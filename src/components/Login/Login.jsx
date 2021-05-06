@@ -105,7 +105,7 @@ const Login = (props) => {
     return (
         <div className="loginComponent">
             <div className="loginTitle">
-                <h2><span>SIGN IN!</span></h2>
+                <h2>SIGN IN!</h2>
             </div>
             <div className="loginContainer">
                 <div className="loginInput">

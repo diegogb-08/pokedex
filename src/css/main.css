@@ -383,7 +383,6 @@ input:checked + .slider:before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,10 +395,12 @@ input:checked + .slider:before {
     height: 100vh; }
   .landingComponent .landingLeft {
     width: 60%; }
+    .landingComponent .landingLeft .logoPokemon {
+      width: 70%; }
   .landingComponent .landingRight {
     width: 40%; }
     .landingComponent .landingRight .registerLanding {
-      background-color: #ffffff;
+      background-color: #fafafad0;
       border: 1px solid #dbdbdb;
       display: flex;
       flex-direction: row;
@@ -481,18 +482,13 @@ input:not(:focus):valid ~ .floating-label {
   height: 65%;
   font-family: "Caveat", cursive;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fafafad0;
   border: 1px solid #dbdbdb; }
   .loginComponent h2 {
     width: 15rem;
     text-align: center;
-    border-bottom: 1.5px solid #333333;
-    line-height: 0.1em;
     margin: 10px 0 20px;
     font-size: 2.5rem; }
-    .loginComponent h2 span {
-      background-color: #ffffff;
-      padding: 0 10px; }
 
 .loginContainer {
   width: 100%;
