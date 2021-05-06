@@ -4,8 +4,8 @@
     .error {
       color: red;
       position: relative;
-      bottom: 4rem;
-      font-size: 11px;
+      bottom: 5rem;
+      font-size: 12px;
       font-style: italic;
       transition: 0.2s ease all;
     }
@@ -50,6 +50,7 @@ input:not(:focus):valid ~ .floating-label{
   bottom: 70px;
   border-radius: $br;
   left: 90%;
+  cursor: pointer;
 }
 
 .spacerCorrector{

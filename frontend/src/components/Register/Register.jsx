@@ -17,10 +17,16 @@ const Register = (props) => {
         full_name: '',
         user_name: '',
         email: '',
-        password: ''
+        password: '',
+        repeatPassword: ''
     })
 
     const [password, setPassword] = useState({
+        hideShow: 'password',
+        showHide: 'SHOW'
+    })
+
+    const [password2, setPassword2] = useState({
         hideShow: 'password',
         showHide: 'SHOW'
     })
@@ -67,12 +73,21 @@ const Register = (props) => {
 
     // FUNCTIONS
 
-    const showPassord = () => {
+    const showPassord = (param) => {
 
-        if(password.hideShow === "password"){
-            return setPassword({...password, hideShow: 'text', showHide: 'HIDE'});
+        if(param !== 'repeatPassword'){
+
+            if(password.hideShow === "password"){
+                return setPassword({...password, hideShow: 'text', showHide: 'HIDE'});
+            }else{
+                return setPassword({...password, hideShow: 'password', showHide: 'SHOW'});
+            }
         }else{
-            return setPassword({...password, hideShow: 'password', showHide: 'SHOW'});
+            if(password2.hideShow === "password"){
+                return setPassword2({...password2, hideShow: 'text', showHide: 'HIDE'});
+            }else{
+                return setPassword2({...password2, hideShow: 'password', showHide: 'SHOW'});
+            }
         }
     }
 
@@ -130,16 +145,6 @@ const Register = (props) => {
                 <div className="registerInput">
                     <InputForm
                         type="text"
-                        name="user_name"
-                        onChange={handleState}
-                        title="User Name"
-                        error={errors.user_name?.help}
-                        style={errors.user_name?.status ?  styles.error : styles.correct}
-                    />
-                </div>
-                <div className="registerInput">
-                    <InputForm
-                        type="text"
                         name="email"
                         onChange={handleState}
                         title="Email"
@@ -157,6 +162,18 @@ const Register = (props) => {
                         style={errors.password?.status ?  styles.error : styles.correct}
                         showHide={password.showHide} 
                         onClick={() => showPassord()}
+                    />
+                </div>
+                <div className="registerInput">
+                    <InputForm
+                        type={password2.hideShow}
+                        name="repeatPassword"
+                        onChange={handleState}
+                        title="Repeat password"
+                        error={errors.repeatPassword?.help}
+                        style={errors.repeatPassword?.status ?  styles.error : styles.correct}
+                        showHide={password2.showHide} 
+                        onClick={() => showPassord('repeatPassword')}
                     />
                 </div>
                 <div className="errorMessage">

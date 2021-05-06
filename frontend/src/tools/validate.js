@@ -26,14 +26,9 @@ export default function validate(fields, context = 'register') {
                     errors[key] = {status: 'error', help: 'Please introduce a valid email.'};
             break;
 
-            case 'full_name' :
+            case 'fullName' :
                 if(! /^[a-zA-Z\u00C0-\u00FF]+(([',. -][a-zA-Z\u00C0-\u00FF ])?[a-zA-Z\u00C0-\u00FF]*)*$/.test(fields[key]))
                     errors[key] = {status: 'error', help: 'Only letters are allowed in the Name field.'};
-            break;
-
-            case 'user_name' :
-                if(! /^(?=.{6,16}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/.test(fields[key]))
-                    errors[key] = {status: 'error', help: 'The user name must contain between 6 to 16 characters and special characters like "_" or ".".'};
             break;
 
             case 'password' :

@@ -430,8 +430,8 @@ input:checked + .slider:before {
   .inputComponent .error {
     color: red;
     position: relative;
-    bottom: 4rem;
-    font-size: 11px;
+    bottom: 5rem;
+    font-size: 12px;
     font-style: italic;
     transition: 0.2s ease all; }
 
@@ -469,7 +469,8 @@ input:not(:focus):valid ~ .floating-label {
   position: relative;
   bottom: 70px;
   border-radius: 0.3em;
-  left: 90%; }
+  left: 90%;
+  cursor: pointer; }
 
 .spacerCorrector {
   height: 3.8rem; }
