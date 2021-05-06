@@ -1,11 +1,11 @@
 import React, { useEffect, useState }  from 'react'
 import { useHistory } from 'react-router-dom'; 
 import InputForm from '../InputForm/InputForm';
-import axios from 'axios';
-import { LOGIN } from '../../redux/types/userType';
+// import axios from 'axios';
+// import { LOGIN } from '../../redux/types/userType';
 import {connect} from 'react-redux';
 import validate from "../../tools/validate";
-import {port,customer,login} from '../../tools/apiPaths';
+//import {port,customer,login} from '../../tools/apiPaths';
 import Button from '../Button/Button';
 
 
