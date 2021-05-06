@@ -417,11 +417,11 @@ input:checked + .slider:before {
         cursor: pointer; }
 
 @media screen and (max-width: 900px) {
-  .landingsComponent {
+  .landingComponent {
     flex-direction: column; }
-    .landingsComponent .landingLeft {
+    .landingComponent .landingLeft {
       width: 100%; }
-    .landingsComponent .landingRight {
+    .landingComponent .landingRight {
       width: 100%; } }
 
 .inputComponent {
