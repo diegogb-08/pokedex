@@ -1,0 +1,56 @@
+.landingComponent{
+    width: 100%;
+    height: 100%;
+    background-color: $backgroundWhite;
+    display: flex;
+    .landingContainers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .landingLeft{
+        width: 60%;
+        background-image: url(/src/img/landing_img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: auto 100%;
+    }
+    .landingRight{
+        width: 40%;
+        .registerLanding {
+            background-color: $white1;
+            border: $border1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 85%;
+            height: 10%;
+            margin-top: 0.5rem;
+            .register{
+                margin-left: 1rem;
+                font-weight: bold;
+                color: $fontcolor2;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Mobile version
+
+@media screen and (max-width: 900px) {
+
+    .landingsComponent{
+        flex-direction: column-reverse;
+    }
+    .landingLeft{
+        width: 100%;
+    }
+    .landingRight {
+        width: 100%;
+    }
+}
