@@ -34,6 +34,7 @@
             width: 85%;
             height: 10%;
             margin-top: 0.5rem;
+            border-radius: $br;
             .register{
                 margin-left: 1rem;
                 font-weight: bold;
@@ -47,9 +48,9 @@
 // Mobile version
 
 @media screen and (max-width: 900px) {
-
+    
     .landingsComponent{
-        flex-direction: column-reverse;
+        flex-direction: column;
         .landingLeft{
             width: 100%;
         }

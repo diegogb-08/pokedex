@@ -408,7 +408,8 @@ input:checked + .slider:before {
       justify-content: center;
       width: 85%;
       height: 10%;
-      margin-top: 0.5rem; }
+      margin-top: 0.5rem;
+      border-radius: 0.3em; }
       .landingComponent .landingRight .registerLanding .register {
         margin-left: 1rem;
         font-weight: bold;
@@ -417,7 +418,7 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 900px) {
   .landingsComponent {
-    flex-direction: column-reverse; }
+    flex-direction: column; }
     .landingsComponent .landingLeft {
       width: 100%; }
     .landingsComponent .landingRight {
@@ -483,7 +484,8 @@ input:not(:focus):valid ~ .floating-label {
   font-family: "Caveat", cursive;
   color: #333333;
   background-color: #fafafad0;
-  border: 1px solid #dbdbdb; }
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em; }
   .loginComponent h2 {
     width: 15rem;
     text-align: center;
@@ -520,18 +522,14 @@ input:not(:focus):valid ~ .floating-label {
   height: 70%;
   font-family: "Caveat", cursive;
   color: #333333;
-  background-color: #ffffff;
-  border: 1px solid #dbdbdb; }
+  background-color: #fafafad0;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em; }
   .registerComponent h2 {
     width: 15rem;
     text-align: center;
-    border-bottom: 1.5px solid #333333;
-    line-height: 0.1em;
     margin: 10px 0 20px;
     font-size: 2.5rem; }
-    .registerComponent h2 span {
-      background-color: #ffffff;
-      padding: 0 10px; }
 
 .registerTitle {
   margin-top: 2rem;

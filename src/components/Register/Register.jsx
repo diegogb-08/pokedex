@@ -114,7 +114,7 @@ const Register = (props) => {
     return (
         <div className='registerComponent'>
             <div className="registerTitle">
-                <h2><span>REGISTER!</span></h2>
+                <h2>REGISTER!</h2>
             </div>
             <div className="registerContainer">
                 <div className="registerInput">
