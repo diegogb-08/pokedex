@@ -418,10 +418,10 @@ input:checked + .slider:before {
 @media screen and (max-width: 900px) {
   .landingsComponent {
     flex-direction: column-reverse; }
-  .landingLeft {
-    width: 100%; }
-  .landingRight {
-    width: 100%; } }
+    .landingsComponent .landingLeft {
+      width: 100%; }
+    .landingsComponent .landingRight {
+      width: 100%; } }
 
 .inputComponent {
   width: 100%;

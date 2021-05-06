@@ -3,7 +3,7 @@ import InputForm from '../InputForm/InputForm'
 import validate from "../../tools/validate";
 import {connect} from 'react-redux';
 //import { LOGIN } from '../../redux/types/userType'
-import axios from 'axios'
+// import axios from 'axios'
 //import { port,customer,login } from '../../tools/apiPaths';
 import Button from '../Button/Button';
 
@@ -83,12 +83,12 @@ const Register = (props) => {
     
         if (Object.keys(errs).length > 0) return;
         
-        let body = {
-            name: user.full_name,
-            user_name: user.user_name,
-            email: user.email,
-            password: user.password
-        }
+        // let body = {
+        //     name: user.full_name,
+        //     user_name: user.user_name,
+        //     email: user.email,
+        //     password: user.password
+        // }
             
         // try {
         //     let result = await axios.post(port+customer, body)

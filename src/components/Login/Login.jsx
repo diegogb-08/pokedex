@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from 'react'
-import { useHistory } from 'react-router-dom'; 
+//import { useHistory } from 'react-router-dom'; 
 import InputForm from '../InputForm/InputForm';
 // import axios from 'axios';
 // import { LOGIN } from '../../redux/types/userType';
@@ -12,7 +12,7 @@ import Button from '../Button/Button';
 
 const Login = (props) => {
 
-    let history = useHistory();
+    //let history = useHistory();
 
     // HOOKS
 

@@ -49,11 +49,11 @@
 
     .landingsComponent{
         flex-direction: column-reverse;
-    }
-    .landingLeft{
-        width: 100%;
-    }
-    .landingRight {
-        width: 100%;
+        .landingLeft{
+            width: 100%;
+        }
+        .landingRight {
+            width: 100%;
+        }
     }
 }
