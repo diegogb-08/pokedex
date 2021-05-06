@@ -1,18 +1,18 @@
 import React, { useEffect, useState }  from 'react'
-//import { useHistory } from 'react-router-dom'; 
+import { useHistory } from 'react-router-dom'; 
 import InputForm from '../InputForm/InputForm';
-// import axios from 'axios';
-// import { LOGIN } from '../../redux/types/userType';
-import {connect} from 'react-redux';
+import axios from 'axios';
+import { LOGIN } from '../../redux/types/userType';
+import { connect } from 'react-redux';
 import validate from "../../tools/validate";
-//import {port,customer,login} from '../../tools/apiPaths';
+import { PORT } from '../../tools/apiPaths';
 import Button from '../Button/Button';
 
 
 
 const Login = (props) => {
 
-    //let history = useHistory();
+    let history = useHistory();
 
     // HOOKS
 
@@ -83,20 +83,19 @@ const Login = (props) => {
         setErrors(errs);
 
         if (Object.keys(errs).length === 0) {
-            // try{
-            //     let result = await axios.post(port+customer+login, credentials)
+            try{
+                let result = await axios.post(PORT+'login', credentials)
 
-            //     if(result.data ) {
-            //         props.dispatch({type: LOGIN, payload: result.data});
+                if(result.data ) {
+                    props.dispatch({type: LOGIN, payload: result.data});
 
-            //         setTimeout(()=>{
-            //             props.dispatch({type: SETACTIVE})
-            //             history.push('/home')
-            //         },500)
-            //     }
-            // }catch(err){
-            //     setMessage('Email or password not found')
-            // }
+                    setTimeout(()=>{
+                        history.push('/home')
+                    },500)
+                }
+            }catch(err){
+                setMessage('Email or password not found')
+            }
         }
         
     }

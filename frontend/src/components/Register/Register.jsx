@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react'
 import InputForm from '../InputForm/InputForm'
 import validate from "../../tools/validate";
 import {connect} from 'react-redux';
-//import { LOGIN } from '../../redux/types/userType'
-// import axios from 'axios'
-//import { port,customer,login } from '../../tools/apiPaths';
+import { LOGIN } from '../../redux/types/userType'
+import axios from 'axios';
 import Button from '../Button/Button';
-
-
-
+import { PORT } from '../../tools/apiPaths';
+import { useHistory } from 'react-router';
 
 const Register = (props) => {
 
+    let history = useHistory();
+
     // HOOKS
     const [user, setUser] = useState({
-        full_name: '',
-        user_name: '',
+        fullName: '',
         email: '',
         password: '',
         repeatPassword: ''
@@ -95,35 +94,38 @@ const Register = (props) => {
 
         const errs = validate(user, "register");
         setErrors(errs);
+        console.log(errs)
     
         if (Object.keys(errs).length > 0) return;
         
-        // let body = {
-        //     name: user.full_name,
-        //     user_name: user.user_name,
-        //     email: user.email,
-        //     password: user.password
-        // }
-            
-        // try {
-        //     let result = await axios.post(port+customer, body)
-        //     if (result) {
+        let body = {
+            fullName: user.fullName,
+            email: user.email,
+            password: user.password
+        }
+        try {
+            let result = await axios.post(PORT, body)
+            console.log(result)
+            if (result.data) {
 
-        //         let dataLogin = {
-        //             email : result.data.email,
-        //             password : user.password,
-        //         }
+                let dataLogin = {
+                    email : user.email,
+                    password : user.password,
+                }
 
-        //         let resultLogin = await axios.post(port+customer+login, dataLogin)
-
-        //         if (resultLogin) {          
-        //             props.dispatch({type: LOGIN, payload: resultLogin.data});
-        //
-        //         }
-        //     } 
-        // } catch (error) {
-        //     setMessage('User already exist! Try with different email or User name')
-        // }
+                let resultLogin = await axios.post(PORT+'login', dataLogin)
+                console.log(result)
+                if (resultLogin.data) {
+                    props.dispatch({type: LOGIN, payload: resultLogin.data});
+                    
+                    setTimeout(()=>{
+                        history.push('/home')
+                    },500)
+                }
+            } 
+        } catch (error) {
+            setMessage('User already exist! Try with different email')
+        }
     };
 
     return (
@@ -135,11 +137,11 @@ const Register = (props) => {
                 <div className="registerInput">
                     <InputForm
                         type="text"
-                        name="full_name"
+                        name="fullName"
                         onChange={handleState}
                         title="Full Name"
-                        error={errors.full_name?.help}
-                        style={errors.full_name?.status ?  styles.error : styles.correct}
+                        error={errors.fullName?.help}
+                        style={errors.fullName?.status ?  styles.error : styles.correct}
                     />
                 </div>
                 <div className="registerInput">

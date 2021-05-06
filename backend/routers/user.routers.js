@@ -21,10 +21,9 @@ router.get('/', async(req, res) => {
 //POST - SignIn a new User in the DB
 
 router.post('/', async(req, res) => {
+
     try {
-        const user = await clientController.signUpUser(req.body);
-        const status = 'success';
-        res.json({ status, user });
+        res.json(await clientController.signUpUser(req.body));
     } catch (err) {
         return res.status(409).json({
             message: err.message
