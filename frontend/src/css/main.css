@@ -370,8 +370,6 @@ input:checked + .slider:before {
 /*Components and main views*/
 .App {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-family: "Rajdhani", sans-serif;
   width: 100%; }
@@ -577,20 +575,12 @@ input:not(:focus):valid ~ .floating-label {
 .homeComponent {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  height: 100%; }
-  .homeComponent .progressLoading {
-    background-color: #f4f4f4;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%; }
+  height: 100vh;
+  align-items: center; }
   .homeComponent .homeContainer {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -598,6 +588,19 @@ input:not(:focus):valid ~ .floating-label {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
+    .homeComponent .homeContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+    .homeComponent .homeContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 1rem; }
 
 .progressComponent {
   background-color: #d8d8d8;
@@ -605,7 +608,7 @@ input:not(:focus):valid ~ .floating-label {
   position: relative;
   margin: 15px 0;
   height: 30px;
-  width: 300px; }
+  width: 100%; }
   .progressComponent .progressDone {
     background: linear-gradient(to left, #F2709C, #FF9472);
     box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
@@ -630,5 +633,23 @@ input:not(:focus):valid ~ .floating-label {
   position: fixed;
   top: 0;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.034)); }
+  .headerComponent .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%; }
+
+.pokeCardComponent {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em;
+  background-color: #fafafad0; }
+  .pokeCardComponent .pokeImg {
+    width: 80%; }
 
 /*Fonts and another urls*/

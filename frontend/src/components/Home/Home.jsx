@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { ADD } from '../../redux/types/pokemonType';
 import { POKEAPI } from '../../tools/apiPaths';
 import Header from '../Header/Header';
+import PokeCard from '../PokeCard/PokeCard';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 const Home = (props) => {
@@ -11,6 +12,11 @@ const Home = (props) => {
     const [pokemons, setPokemons] = useState([])
 
     const [loading, setLoading] = useState(false)
+
+    const [filter, setFilter] = useState({
+        offset: 0,
+        limit: 20
+    })
 
     // First mount it will make the call to the api
     useEffect(()=>{
@@ -21,11 +27,11 @@ const Home = (props) => {
     // once the pokelist State is full then we dispatch everything to redux state
     useEffect(()=>{
 
-        if(pokemons.length === 75)
+        if(pokemons.length === 20)
             props.dispatch({type: ADD, payload: pokemons})
             setTimeout(()=>{
                 setLoading(false)
-            },200)
+            },2000)
         // eslint-disable-next-line
     },[pokemons])
 
@@ -33,12 +39,10 @@ const Home = (props) => {
 
     // Only makes the call the first time is mounted, after will check props before making the call to prevent excessive calls
     const getList = async () => {
-
-        if(props.pokeList.length === 0){
-    
+     
             setLoading(true)
-            let result = await axios.get(POKEAPI+'pokemon?offset=75&limit=75')
-
+            let result = await axios.get(POKEAPI+`pokemon?offset=${filter.offset}&limit=${filter.limit}`)
+            console.log('===========',result)
             if(result.data){
                 result.data.results.map(async pokemon => {
                     let result = await axios.get(pokemon.url)
@@ -47,42 +51,47 @@ const Home = (props) => {
 
                 })
             }
-        }
+
     }
 
     // It gets the percentage to be loaded by the loading bar and it returns a rounded number
     const getLoadingPercentage = (length) => {
 
-        let percentage = (length / 75)*100
+        let percentage = (length / 20)*100
         return Math.round(percentage)
     }
 
-
-    console.log(props.pokeList)
     return (
         <div className="homeComponent">
-            {
-                loading ?
-                <>
-                    <div className="progressLoading">
-                        <h2>Loading pokemons...</h2>
-                        <ProgressBar done={getLoadingPercentage(pokemons.length)}/>
-                    </div>
+            <div className="homeContainer">
+                <Header/>
+                <div className="spacer"></div>
+                <div className="spacer"></div>
+                <div className="spacer"></div>
+                <div className="spacer"></div>
+                <div className="spacer"></div>
+                <div className="spacer"></div>
+                {
+                    loading ?
+                    <>
+                        <div className="progressLoading">
+                            <ProgressBar done={getLoadingPercentage(pokemons.length)}/>
+                        </div>
+                    </>
 
-                </>
-                :
-                <>
-                    <div className="homeContainer">
-                        <Header/>
-                        <div className="spacer"></div>
-                        <div className="spacer"></div>
-                        <div className="spacer"></div>
-                        <div className="spacer"></div>
-                        <div className="spacer"></div>
-                        Aqui metemos el resto de cosas
-                    </div>
-                </> 
-            }
+                    :
+                    <>
+                        <div className="grid">
+                            {
+                                props.pokeList.map(pokemon => {
+                                    console.log(pokemon)
+                                    return <PokeCard pokemon={pokemon} key={pokemon.id}/>
+                                })
+                            }
+                        </div>
+                    </>
+                }
+            </div>
         </div>
     )
 }

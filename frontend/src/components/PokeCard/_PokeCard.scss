@@ -1,0 +1,14 @@
+.pokeCardComponent{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: $border1;
+    border-radius: $br;
+    background-color: $transparentWhite;
+    .pokeImg{
+        width: 80%;
+    }
+}
