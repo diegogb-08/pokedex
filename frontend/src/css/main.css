@@ -659,29 +659,47 @@ input:not(:focus):valid ~ .floating-label {
       color: inherit; }
       .headerComponent .navbar .link p {
         font-weight: bold; }
-  .headerComponent .sequence {
+    .headerComponent .navbar .filter {
+      cursor: pointer; }
+  .headerComponent .message {
+    color: #e41619; }
+  .headerComponent .sequenceContainer {
     position: absolute;
-    height: 100%;
+    height: 10rem;
     width: 20rem;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #fafafa;
     top: 4rem;
     border-radius: 0.3em;
     border: 1px solid #dbdbdb; }
-    .headerComponent .sequence h4 {
-      margin: 0;
-      padding: 0;
-      color: #7c7578; }
-    .headerComponent .sequence input {
-      width: 3rem;
-      padding: 12px 20px;
-      display: inline-block;
-      border-radius: 0.3em;
-      border: 1px solid #ccc;
-      background-color: #fafafa; }
+    .headerComponent .sequenceContainer .sequence {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center; }
+      .headerComponent .sequenceContainer .sequence h4 {
+        margin: 0;
+        padding: 0;
+        color: #7c7578; }
+      .headerComponent .sequenceContainer .sequence input {
+        width: 3rem;
+        padding: 12px 20px;
+        display: inline-block;
+        border-radius: 0.3em;
+        border: 1px solid #ccc;
+        background-color: #fafafa; }
+    .headerComponent .sequenceContainer .buttonFilter {
+      width: 70%;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .headerComponent .sequenceContainer .buttonFilter p {
+        color: #ffffff;
+        font-weight: bold; }
 
 .pokeCardComponent {
   width: 15rem;

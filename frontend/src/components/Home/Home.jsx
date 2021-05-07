@@ -11,17 +11,18 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 const Home = (props) => {
 
     const [pokemons, setPokemons] = useState([])
-
     const [loading, setLoading] = useState(false)
-
+    const [message, setMessage] = useState('')
     const [filter, setFilter] = useState({
         offset: 0,
         limit: 20
     })
 
     console.log(filter)
-    function handleChange(e) {
-        setFilter({...filter, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+  
+    const handleChange = (e) => {
+        setMessage('')
+        setFilter({...filter, [e.target.name]: parseInt(e.target.value), [e.target.name]: parseInt(e.target.value)});
     }
 
     // First mount it will make the call to the api
@@ -48,7 +49,7 @@ const Home = (props) => {
      
             setLoading(true)
             let result = await axios.get(POKEAPI+`pokemon?offset=${filter.offset}&limit=${filter.limit}`)
-            console.log(result.data)
+            console.log('==============',result.data)
             if(result.data){
                 result.data.results.map(async pokemon => {
                     let result = await axios.get(pokemon.url)
@@ -67,10 +68,22 @@ const Home = (props) => {
         return Math.round(percentage)
     }
 
+
+    const newSearch = () => {
+
+        if(filter.limit - filter.offset > 20 || filter.limit - filter.offset < 0){
+            setMessage('Can find only 20 pokemons for each search');
+        }else{
+            setMessage('')
+            setPokemons([])
+            getList()
+        }   
+    }
+
     return (
         <div className="homeComponent">
             <div className="homeContainer">
-                <Header onChange={handleChange}/>
+                <Header onChange={handleChange} onClick={()=>newSearch()} message={message} />
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
