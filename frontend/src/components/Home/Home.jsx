@@ -20,7 +20,6 @@ const Home = (props) => {
         limit: 20
     })
 
-    console.log(pokemons)
     // First mount it will make the call to the api
     useEffect(()=>{
         getList()
@@ -44,15 +43,22 @@ const Home = (props) => {
     const getList = async () => {
      
             setLoading(true)
-            let result = await axios.get(POKEAPI+`pokemon?limit=${filter.limit}&offset=${filter.offset}`)
 
-            if(result.data){
-                result.data.results.map(async pokemon => {
-                    let result = await axios.get(pokemon.url)
+            try{
 
-                    setPokemons(pokemons => [...pokemons, result.data])
+                let result = await axios.get(POKEAPI+`pokemon?limit=${filter.limit}&offset=${filter.offset}`)
+    
+                if(result.data){
+                    result.data.results.map(async pokemon => {
 
-                })
+                        let result = await axios.get(pokemon.url)
+                        if(result.data)
+                            setPokemons(pokemons => [...pokemons, result.data])
+
+                    })
+                }
+            }catch (err){
+
             }
 
     }
