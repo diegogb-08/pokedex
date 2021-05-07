@@ -595,12 +595,24 @@ input:not(:focus):valid ~ .floating-label {
       justify-content: center;
       height: 100%;
       width: 50%; }
+      .homeComponent .homeContainer .progressLoading h1 {
+        color: white; }
     .homeComponent .homeContainer .grid {
       overflow-y: scroll;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       height: 100%;
-      grid-gap: 1rem; }
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1080px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 800px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 550px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
 
 .progressComponent {
   background-color: #d8d8d8;
@@ -629,15 +641,47 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 200;
+  z-index: 1;
   position: fixed;
   top: 0;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.034)); }
   .headerComponent .navbar {
+    z-index: 3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 50%; }
+    align-items: center;
+    width: 50%;
+    height: 100%; }
+    .headerComponent .navbar .link {
+      display: block;
+      text-decoration: none;
+      color: inherit; }
+      .headerComponent .navbar .link p {
+        font-weight: bold; }
+  .headerComponent .sequence {
+    position: absolute;
+    height: 100%;
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fafafa;
+    top: 4rem;
+    border-radius: 0.3em;
+    border: 1px solid #dbdbdb; }
+    .headerComponent .sequence h4 {
+      margin: 0;
+      padding: 0;
+      color: #7c7578; }
+    .headerComponent .sequence input {
+      width: 3rem;
+      padding: 12px 20px;
+      display: inline-block;
+      border-radius: 0.3em;
+      border: 1px solid #ccc;
+      background-color: #fafafa; }
 
 .pokeCardComponent {
   width: 15rem;
@@ -648,11 +692,23 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: column;
   border: 1px solid #dbdbdb;
   border-radius: 0.3em;
-  background-color: #fafafad0; }
+  background-color: #fafafad0;
+  cursor: pointer; }
   .pokeCardComponent .pokeImg {
     width: 70%; }
   .pokeCardComponent h3 {
     margin: 0;
     padding: 0; }
+
+.pokeCardComponent:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition: 0.5s ease all; }
+
+.cardModalContainer {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column; }
 
 /*Fonts and another urls*/

@@ -8,6 +8,7 @@
     border: $border1;
     border-radius: $br;
     background-color: $transparentWhite;
+    cursor: pointer;
     .pokeImg{
         width: 70%;
     }
@@ -15,4 +16,9 @@
         margin: 0;
         padding: 0;
     }
+}
+.pokeCardComponent:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 0.5s ease all;
 }

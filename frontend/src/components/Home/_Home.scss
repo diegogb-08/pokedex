@@ -22,13 +22,32 @@
             justify-content: center;
             height: 100%;
             width: 50%;
+            h1{
+                color: white;
+            }
         }
         .grid{
             overflow-y: scroll;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             height: 100%;
-            grid-gap: 1rem;
+            grid-gap: 2rem;
+            padding: 2rem;
+        }
+        @media screen and (max-width: 1080px) {
+            .grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 550px) {
+            .grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     }
 }

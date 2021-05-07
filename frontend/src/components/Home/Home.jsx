@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux';
 import { ADD } from '../../redux/types/pokemonType';
 import { POKEAPI } from '../../tools/apiPaths';
+import CardModal from '../CardModal/CardModal';
 import Header from '../Header/Header';
 import PokeCard from '../PokeCard/PokeCard';
 import ProgressBar from '../ProgressBar/ProgressBar';
@@ -17,6 +18,11 @@ const Home = (props) => {
         offset: 0,
         limit: 20
     })
+
+    console.log(filter)
+    function handleChange(e) {
+        setFilter({...filter, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+    }
 
     // First mount it will make the call to the api
     useEffect(()=>{
@@ -42,7 +48,7 @@ const Home = (props) => {
      
             setLoading(true)
             let result = await axios.get(POKEAPI+`pokemon?offset=${filter.offset}&limit=${filter.limit}`)
-            console.log('===========',result)
+            console.log(result.data)
             if(result.data){
                 result.data.results.map(async pokemon => {
                     let result = await axios.get(pokemon.url)
@@ -64,7 +70,7 @@ const Home = (props) => {
     return (
         <div className="homeComponent">
             <div className="homeContainer">
-                <Header/>
+                <Header onChange={handleChange}/>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
@@ -75,6 +81,7 @@ const Home = (props) => {
                     loading ?
                     <>
                         <div className="progressLoading">
+                            <h1>Loading Pokemons...</h1>
                             <ProgressBar done={getLoadingPercentage(pokemons.length)}/>
                         </div>
                     </>
@@ -84,8 +91,10 @@ const Home = (props) => {
                         <div className="grid">
                             {
                                 props.pokeList.map(pokemon => {
-                                    console.log(pokemon)
-                                    return <PokeCard pokemon={pokemon} key={pokemon.id}/>
+
+                                    return <CardModal pokemon={pokemon} key={pokemon.id}>
+                                                <PokeCard pokemon={pokemon} key={pokemon.id}/>
+                                            </CardModal>
                                 })
                             }
                         </div>
