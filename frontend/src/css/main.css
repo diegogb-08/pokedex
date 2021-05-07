@@ -574,4 +574,61 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 18px;
   cursor: pointer; }
 
+.homeComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+  .homeComponent .progressLoading {
+    background-color: #f4f4f4;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%; }
+  .homeComponent .homeContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/src/img/home_wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.progressComponent {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 300px; }
+  .progressComponent .progressDone {
+    background: linear-gradient(to left, #F2709C, #FF9472);
+    box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s; }
+
+.headerComponent {
+  box-sizing: border-box;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.034)); }
+
 /*Fonts and another urls*/

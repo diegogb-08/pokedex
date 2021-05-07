@@ -1,0 +1,12 @@
+.headerComponent {
+    box-sizing: border-box;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.034));
+}

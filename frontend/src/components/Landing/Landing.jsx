@@ -5,15 +5,14 @@ import pokemon from '../../img/Pokemon-Logo.png'
 
 const Landing = (props) => {
 
+    // Change the state to show Login or Register
     const [active, setActive] = useState(true)
-
     
     const register = () => {
         setTimeout(()=>{
             setActive(!active)
         },500)
     }
-
 
 
     return (
