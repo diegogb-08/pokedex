@@ -8,23 +8,19 @@ import Header from '../Header/Header';
 import PokeCard from '../PokeCard/PokeCard';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
+
 const Home = (props) => {
 
     const [pokemons, setPokemons] = useState([])
     const [loading, setLoading] = useState(false)
-    const [message, setMessage] = useState('')
     const [filter, setFilter] = useState({
         offset: 0,
         limit: 20
     })
 
-    console.log(filter)
-  
-    const handleChange = (e) => {
-        setMessage('')
-        setFilter({...filter, [e.target.name]: parseInt(e.target.value), [e.target.name]: parseInt(e.target.value)});
-    }
-
+    console.log(pokemons)
     // First mount it will make the call to the api
     useEffect(()=>{
         getList()
@@ -48,8 +44,8 @@ const Home = (props) => {
     const getList = async () => {
      
             setLoading(true)
-            let result = await axios.get(POKEAPI+`pokemon?offset=${filter.offset}&limit=${filter.limit}`)
-            console.log('==============',result.data)
+            let result = await axios.get(POKEAPI+`pokemon?limit=${filter.limit}&offset=${filter.offset}`)
+
             if(result.data){
                 result.data.results.map(async pokemon => {
                     let result = await axios.get(pokemon.url)
@@ -67,29 +63,28 @@ const Home = (props) => {
         let percentage = (length / 20)*100
         return Math.round(percentage)
     }
+    
+    const nextPage = (value) => {
 
-
-    const newSearch = () => {
-
-        if(filter.limit - filter.offset > 20 || filter.limit - filter.offset < 0){
-            setMessage('Can find only 20 pokemons for each search');
-        }else{
-            setMessage('')
+        if((filter.offset + value) > -1){
+            setFilter({...filter, offset: filter.offset + value})
             setPokemons([])
             getList()
-        }   
-    }
+        }
+    } 
 
     return (
         <div className="homeComponent">
             <div className="homeContainer">
-                <Header onChange={handleChange} onClick={()=>newSearch()} message={message} />
+                <Header />
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
                 <div className="spacer"></div>
+                <FontAwesomeIcon icon={faArrowAltCircleLeft}  className="arrow arrowLeft" onClick={()=>nextPage(-20)}/>
+                <FontAwesomeIcon icon={faArrowAltCircleRight} className="arrow arrowRight" onClick={()=>nextPage(20)}/>
                 {
                     loading ?
                     <>

@@ -14,7 +14,22 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position:center;
-        
+        .arrow{
+            position: absolute;
+            font-size: 4rem;
+            top: 10rem;
+            cursor: pointer;
+            color: $fontcolor2;
+        }
+        .arrow:hover{
+            color: $red;
+        }
+        .arrowLeft{
+            left: 7%;
+        }
+        .arrowRight{
+            right: 7%;
+        }
         .progressLoading{
             flex-direction: column;
             display: flex;
@@ -34,17 +49,17 @@
             grid-gap: 2rem;
             padding: 2rem;
         }
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 1400px) {
             .grid{
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1080px) {
             .grid{
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 750px) {
             .grid{
                 grid-template-columns: repeat(1, 1fr);
             }
