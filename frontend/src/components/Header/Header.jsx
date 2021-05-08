@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import pokeball from '../../img/pokeball.png';
 
 const Header = (props) => {
+
+    let history = useHistory();
 
     const [showPokeballs, setShowPokeballs] = useState({})
 
@@ -13,7 +15,9 @@ const Header = (props) => {
     },[props.compareList])
 
     const showBattle = () => {
-
+        setTimeout(()=>{
+            history.push('/battle')
+        },500)
     }
 
     return (
