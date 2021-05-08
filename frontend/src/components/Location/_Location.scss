@@ -1,0 +1,93 @@
+.locationComponent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    .locationContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(/src/img/location_img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        .title{
+            color: white;
+            background-color: $fontcolor2;
+            border-radius: $br;
+            padding: 1rem;
+        }
+        .filterLocation{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 70%;
+            font-size: 1.5rem;
+            .areaCollection{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .area{
+                    background-color: $transparentWhite;
+                    font-size: 18px;
+                    margin: 0.5rem;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                    font-weight: bold;
+                    border-radius: $br;
+                    cursor: pointer;
+                }
+                .area:hover{
+                    background-color: $blue;
+                }
+            }
+            .arrow{
+                cursor: pointer;
+                color: $white1;
+                font-size: 3rem;
+            }
+            .arrow:hover{
+                color: $red;
+            }
+        }
+        .progressLoading{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+            h1{
+                color: white;
+            }
+        }
+        .grid{
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 100%;
+            grid-gap: 2rem;
+            padding: 2rem;
+        }
+        @media screen and (max-width: 1400px) {
+            .grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media screen and (max-width: 1080px) {
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

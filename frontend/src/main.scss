@@ -1,0 +1,27 @@
+/*Utilities*/
+@import './scss/reset.scss';
+@import './scss/mixings.scss';
+@import './scss/variables.scss';
+
+
+/*Components and main views*/
+
+@import './App.scss';
+@import './components/Landing/Landing.scss';
+@import './components/InputForm/InputForm.scss';
+@import './components/Login/Login.scss';
+@import './components/Register/Register.scss';
+@import './components/Button/Button.scss';
+@import './components/Home/Home.scss';
+@import './components/ProgressBar/ProgressBar.scss';
+@import './components/Header/Header.scss';
+@import './components/PokeCard/PokeCard.scss';
+@import './components/CardModal/CardModal.scss';
+@import './components/Location/Location.scss';
+@import './components/Color/Color.scss';
+@import './components/Species/Species.scss';
+
+/*Fonts and another urls*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');

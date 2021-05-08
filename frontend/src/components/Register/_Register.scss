@@ -1,0 +1,56 @@
+.registerComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 70%;
+    font-family: $fontStyle;
+    color: $fontcolor1;
+    background-color: $transparentWhite;
+    border: $border1;
+    border-radius: $br;
+    h2 {
+        width: 15rem; 
+        text-align: center; 
+        margin: 10px 0 20px; 
+        font-size: 2.5rem;
+    }
+}
+
+.registerTitle{
+    margin-top: $m2;
+    margin-bottom: $m2;
+}
+
+
+.registerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontCasual;
+}
+
+.registerInput {
+    width: 70%;
+    height: 2.5rem;
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.buttonLogin{
+    margin-top: $p2;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    p{
+        color: white;
+        padding: 0 3rem 0 3rem;
+    }
+}
+
+.errorMessage{
+    color: red;
+    height: 1rem;
+}

@@ -1,0 +1,886 @@
+/*Utilities*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0 auto; }
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: flex; }
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 3em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline; }
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto; }
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block; }
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item; }
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none; }
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none; }
+
+.spacer {
+  height: 1rem;
+  width: 1rem; }
+
+.halfSpacer {
+  height: 0.5rem; }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+input:checked + .slider {
+  background-color: #2196F3; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+/*Margin*/
+/*Padding*/
+/* Image */
+/*Components and main views*/
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: "Rajdhani", sans-serif;
+  width: 100%; }
+
+.landingComponent {
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/landing_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  .landingComponent .landingContainers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; }
+  .landingComponent .landingLeft {
+    width: 60%; }
+    .landingComponent .landingLeft .logoPokemon {
+      width: 70%; }
+  .landingComponent .landingRight {
+    width: 40%; }
+    .landingComponent .landingRight .registerLanding {
+      background-color: #fafafad0;
+      border: 1px solid #dbdbdb;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 10%;
+      margin-top: 0.5rem;
+      border-radius: 0.3em; }
+      .landingComponent .landingRight .registerLanding .register {
+        margin-left: 1rem;
+        font-weight: bold;
+        color: #f05356;
+        cursor: pointer; }
+
+@media screen and (max-width: 900px) {
+  .landingComponent {
+    flex-direction: column; }
+    .landingComponent .landingLeft {
+      width: 100%; }
+    .landingComponent .landingRight {
+      width: 100%; } }
+
+.inputComponent {
+  width: 100%;
+  margin-right: 2rem; }
+  .inputComponent .error {
+    color: red;
+    position: relative;
+    bottom: 5rem;
+    font-size: 12px;
+    font-style: italic;
+    transition: 0.2s ease all; }
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  left: 15px;
+  bottom: 45px;
+  font-size: 11px;
+  opacity: 1;
+  color: #7c7578; }
+
+.inputText {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 0.3em;
+  border: 1px solid #ccc;
+  background-color: #fafafa; }
+
+.floating-label {
+  position: relative;
+  pointer-events: none;
+  left: 20px;
+  bottom: 30px;
+  transition: 0.2s ease all;
+  color: #7c7578; }
+
+.iconInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3.8rem;
+  position: relative;
+  bottom: 70px;
+  border-radius: 0.3em;
+  left: 90%;
+  cursor: pointer; }
+
+.spacerCorrector {
+  height: 3.8rem; }
+
+.loginComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 65%;
+  font-family: "Caveat", cursive;
+  color: #333333;
+  background-color: #fafafad0;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em; }
+  .loginComponent h2 {
+    width: 15rem;
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 2.5rem; }
+
+.loginContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rajdhani", sans-serif; }
+
+.loginInput {
+  width: 70%;
+  height: 2.5rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; }
+
+.buttonLogin {
+  margin-left: 0.5rem;
+  font-weight: bold; }
+  .buttonLogin p {
+    color: white; }
+
+.registerComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 70%;
+  font-family: "Caveat", cursive;
+  color: #333333;
+  background-color: #fafafad0;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em; }
+  .registerComponent h2 {
+    width: 15rem;
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 2.5rem; }
+
+.registerTitle {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.registerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rajdhani", sans-serif; }
+
+.registerInput {
+  width: 70%;
+  height: 2.5rem;
+  display: flex;
+  margin-bottom: 2.5rem; }
+
+.buttonLogin {
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  font-weight: bold; }
+  .buttonLogin p {
+    color: white;
+    padding: 0 3rem 0 3rem; }
+
+.errorMessage {
+  color: red;
+  height: 1rem; }
+
+.buttonComponent {
+  background-color: #e41619;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.3em;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer; }
+
+.homeComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center; }
+  .homeComponent .homeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/src/img/home_wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .homeComponent .homeContainer .arrow {
+      position: absolute;
+      font-size: 4rem;
+      top: 10rem;
+      cursor: pointer;
+      color: #f05356; }
+    .homeComponent .homeContainer .arrow:hover {
+      color: #e41619; }
+    .homeComponent .homeContainer .arrowLeft {
+      left: 7%; }
+    .homeComponent .homeContainer .arrowRight {
+      right: 7%; }
+    .homeComponent .homeContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+      .homeComponent .homeContainer .progressLoading h1 {
+        color: white; }
+    .homeComponent .homeContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1400px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 1080px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 750px) {
+      .homeComponent .homeContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
+
+.progressComponent {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 100%; }
+  .progressComponent .progressDone {
+    background: linear-gradient(to left, #F2709C, #FF9472);
+    box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s; }
+
+.headerComponent {
+  box-sizing: border-box;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.034)); }
+  .headerComponent .navbar {
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%; }
+    .headerComponent .navbar .link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.5rem;
+      color: #f05356; }
+      .headerComponent .navbar .link p {
+        font-weight: bold; }
+
+.pokeCardComponent {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.3em;
+  background-color: #fafafad0;
+  cursor: pointer; }
+  .pokeCardComponent .pokeImg {
+    width: 70%; }
+  .pokeCardComponent h3 {
+    margin: 0;
+    padding: 0; }
+
+.pokeCardComponent:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition: 0.5s ease all; }
+
+.cardModalContainer {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column; }
+
+.locationComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center; }
+  .locationComponent .locationContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/src/img/location_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .locationComponent .locationContainer .title {
+      color: white;
+      background-color: #f05356;
+      border-radius: 0.3em;
+      padding: 1rem; }
+    .locationComponent .locationContainer .filterLocation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 70%;
+      font-size: 1.5rem; }
+      .locationComponent .locationContainer .filterLocation .areaCollection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; }
+        .locationComponent .locationContainer .filterLocation .areaCollection .area {
+          background-color: #fafafad0;
+          font-size: 18px;
+          margin: 0.5rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          font-weight: bold;
+          border-radius: 0.3em;
+          cursor: pointer; }
+        .locationComponent .locationContainer .filterLocation .areaCollection .area:hover {
+          background-color: #35abec; }
+      .locationComponent .locationContainer .filterLocation .arrow {
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 3rem; }
+      .locationComponent .locationContainer .filterLocation .arrow:hover {
+        color: #e41619; }
+    .locationComponent .locationContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+      .locationComponent .locationContainer .progressLoading h1 {
+        color: white; }
+    .locationComponent .locationContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1400px) {
+      .locationComponent .locationContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 1080px) {
+      .locationComponent .locationContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 750px) {
+      .locationComponent .locationContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
+
+.colorComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center; }
+  .colorComponent .colorContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/src/img/color_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .colorComponent .colorContainer .whiter {
+      width: 100%;
+      height: 5rem;
+      background-color: white; }
+    .colorComponent .colorContainer .colorSelector {
+      font-size: 1.5rem;
+      border-radius: 4px;
+      width: 20rem; }
+    .colorComponent .colorContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+      .colorComponent .colorContainer .progressLoading h1 {
+        color: white; }
+    .colorComponent .colorContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1400px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 1080px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 750px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
+
+.speciesComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center; }
+  .speciesComponent .speciesContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/src/img/species_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .speciesComponent .speciesContainer .whiter {
+      width: 100%;
+      height: 5rem;
+      background-color: white; }
+    .speciesComponent .speciesContainer .title {
+      color: white;
+      background-color: #f05356;
+      border-radius: 0.3em;
+      padding: 1rem; }
+    .speciesComponent .speciesContainer .filterSpecies {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 70%;
+      font-size: 1.5rem; }
+      .speciesComponent .speciesContainer .filterSpecies .kindCollection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; }
+        .speciesComponent .speciesContainer .filterSpecies .kindCollection .kind {
+          background-color: #fafafad0;
+          font-size: 18px;
+          margin: 0.5rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          font-weight: bold;
+          border-radius: 0.3em;
+          cursor: pointer; }
+        .speciesComponent .speciesContainer .filterSpecies .kindCollection .kind:hover {
+          background-color: #35abec; }
+      .speciesComponent .speciesContainer .filterSpecies .arrow {
+        cursor: pointer;
+        color: #f05356;
+        font-size: 3rem; }
+      .speciesComponent .speciesContainer .filterSpecies .arrow:hover {
+        color: #e41619; }
+
+/*Fonts and another urls*/

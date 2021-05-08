@@ -1,0 +1,24 @@
+.pokeCardComponent{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: $border1;
+    border-radius: $br;
+    background-color: $transparentWhite;
+    cursor: pointer;
+    .pokeImg{
+        width: 70%;
+    }
+    h3{
+        margin: 0;
+        padding: 0;
+    }
+}
+.pokeCardComponent:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 0.5s ease all;
+}
