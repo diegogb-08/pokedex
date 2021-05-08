@@ -14,19 +14,37 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position:center;
+        .title{
+            color: white;
+            background-color: $fontcolor2;
+            border-radius: $br;
+            padding: 1rem;
+        }
         .filterLocation{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
-            width: 50%;
+            width: 70%;
             font-size: 1.5rem;
-            select{
-                border: none;
-                font-size: 1.5rem;
-                height: 3rem;
-                padding: 5px;
-                width: 350px;
+            .areaCollection{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .area{
+                    background-color: $transparentWhite;
+                    font-size: 18px;
+                    margin: 0.5rem;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                    font-weight: bold;
+                    border-radius: $br;
+                    cursor: pointer;
+                }
+                .area:hover{
+                    background-color: $blue;
+                }
             }
             .arrow{
                 cursor: pointer;
@@ -35,6 +53,40 @@
             }
             .arrow:hover{
                 color: $red;
+            }
+        }
+        .progressLoading{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+            h1{
+                color: white;
+            }
+        }
+        .grid{
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 100%;
+            grid-gap: 2rem;
+            padding: 2rem;
+        }
+        @media screen and (max-width: 1400px) {
+            .grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media screen and (max-width: 1080px) {
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .grid{
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     }

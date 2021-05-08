@@ -7,7 +7,7 @@
 /*Components and main views*/
 
 @import './App.scss';
-@import './components/Landing/Landing';
+@import './components/Landing/Landing.scss';
 @import './components/InputForm/InputForm.scss';
 @import './components/Login/Login.scss';
 @import './components/Register/Register.scss';
@@ -17,7 +17,8 @@
 @import './components/Header/Header.scss';
 @import './components/PokeCard/PokeCard.scss';
 @import './components/CardModal/CardModal.scss';
-@import './components/Location/Location';
+@import './components/Location/Location.scss';
+@import './components/Color/Color.scss';
 
 
 /*Fonts and another urls*/
