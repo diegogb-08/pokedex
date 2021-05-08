@@ -882,5 +882,30 @@ input:not(:focus):valid ~ .floating-label {
         font-size: 3rem; }
       .speciesComponent .speciesContainer .filterSpecies .arrow:hover {
         color: #e41619; }
+    .speciesComponent .speciesContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+      .speciesComponent .speciesContainer .progressLoading h1 {
+        color: white; }
+    .speciesComponent .speciesContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1400px) {
+      .speciesComponent .speciesContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 1080px) {
+      .speciesComponent .speciesContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 750px) {
+      .speciesComponent .speciesContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
 
 /*Fonts and another urls*/
