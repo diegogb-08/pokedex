@@ -802,5 +802,30 @@ input:not(:focus):valid ~ .floating-label {
       font-size: 1.5rem;
       border-radius: 4px;
       width: 20rem; }
+    .colorComponent .colorContainer .progressLoading {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%; }
+      .colorComponent .colorContainer .progressLoading h1 {
+        color: white; }
+    .colorComponent .colorContainer .grid {
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 100%;
+      grid-gap: 2rem;
+      padding: 2rem; }
+    @media screen and (max-width: 1400px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 1080px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 750px) {
+      .colorComponent .colorContainer .grid {
+        grid-template-columns: repeat(1, 1fr); } }
 
 /*Fonts and another urls*/
