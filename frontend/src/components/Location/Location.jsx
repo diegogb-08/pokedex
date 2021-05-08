@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { POKEAPI } from '../../tools/apiPaths'
 import Header from '../Header/Header'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import ProgressBar from '../ProgressBar/ProgressBar'
 import CardModal from '../CardModal/CardModal'
 import PokeCard from '../PokeCard/PokeCard'
