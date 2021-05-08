@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { POKEAPI } from '../../tools/apiPaths'
 import CardModal from '../CardModal/CardModal';
 import Header from '../Header/Header'

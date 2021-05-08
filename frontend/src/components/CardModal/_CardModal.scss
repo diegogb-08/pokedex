@@ -1,6 +1,79 @@
 .cardModalContainer{
-    width: 80vw;
+    min-width: 60vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
+    border-radius: $br;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    font-family: $fontCasual;
+    .imgContainer{
+        width: 100%;
+        height: 50%;
+        border-radius: $br;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .check{
+        position: absolute;
+        font-size: 15rem;
+        color: $green;
+        transition: 0.5s ease-in-out;
+        display: none;
+    }
+    .whiteShadow{
+        background-color: white;
+        width: 100%;
+        height: 50%;
+        border-radius: 0 0 $br $br;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 2rem;
+        }
+        .pokeInfo{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .stats{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 10rem;
+                h3{
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                }
+                ul {
+                    list-style-type: none;
+                    font-size: 1.5rem;
+                }
+                .addPokemonToList{
+                    margin-top: 2rem;
+                    width: 10rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        font-weight: bold;
+                        color: white;
+                    }
+
+                }
+            }
+        }
+        .message{
+            color: red;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
 }

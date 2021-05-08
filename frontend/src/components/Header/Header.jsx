@@ -1,11 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React, { useEffect, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { connect } from 'react-redux';
+import pokeball from '../../img/pokeball.png';
 
 const Header = (props) => {
 
+    let history = useHistory();
 
-    
+    const [showPokeballs, setShowPokeballs] = useState({})
+
+    useEffect(()=>{
+        if(props.compareList.length > 0)
+        setShowPokeballs({display: 'flex'})
+    },[props.compareList])
+
+    const showBattle = () => {
+        setTimeout(()=>{
+            history.push('/battle')
+        },500)
+    }
 
     return (
         <div className="headerComponent" >
@@ -23,8 +36,28 @@ const Header = (props) => {
                     <p>Species</p>
                 </Link>
             </div>
+            <div className="comparePokemons" style={showPokeballs} onClick={()=>showBattle()}>
+                {
+                    props.compareList.length === 1 ?
+                    <>
+                        <img src={pokeball} alt="pokeball" className="pokeball"/>
+                    </>
+                    :
+                    <>
+                        <img src={pokeball} alt="pokeball" className="pokeball"/>
+                        <img src={pokeball} alt="pokeball" className="pokeball"/>
+                    </>
+                }
+            </div>
         </div>
     )
 }
 
-export default Header
+const mapStateToProps = state => {
+    return {
+        compareList: state.pokemonReducer.compareList,
+    }
+}
+
+
+export default connect(mapStateToProps)(Header); 

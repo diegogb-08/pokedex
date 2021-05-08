@@ -29,4 +29,15 @@
         }
         
     }
+    .comparePokemons{
+        height: 90%;
+        width: 10rem;
+        display: none;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        .pokeball{
+            height: 100%;
+        }
+    }
 }
