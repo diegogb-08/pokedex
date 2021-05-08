@@ -87,7 +87,7 @@ const Species = () => {
                 <Header/>
                 <div className="whiter"></div>
                 <div className="spacer"></div>
-                <h2 className="title">CHOOSE AREA</h2>
+                <h2 className="title">CHOOSE SPECIES</h2>
                 <div className="filterSpecies">
                     <FontAwesomeIcon icon={faArrowAltCircleLeft}  className="arrow" onClick={()=>nextPage(-10)}/>
                     <div className="kindCollection">

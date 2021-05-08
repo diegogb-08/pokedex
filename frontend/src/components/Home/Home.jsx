@@ -54,6 +54,7 @@ const Home = (props) => {
                         let result = await axios.get(pokemon.url)
                         if(result.data)
                             setPokemons(pokemons => [...pokemons, result.data])
+                            console.clear()
 
                     })
                 }

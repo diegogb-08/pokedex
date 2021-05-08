@@ -1,7 +1,8 @@
-import { ADD, CLEAN } from '../types/pokemonType';
+import { ADD, CLEAN, COMPARE } from '../types/pokemonType';
 
 const initialState = {
     pokeList: [],
+    compareList: []
 };
 
 const pokemonReducer = (state = initialState, action) => {
@@ -13,6 +14,13 @@ const pokemonReducer = (state = initialState, action) => {
                 pokeList : action.payload,
                 
             }
+
+        case COMPARE :
+        return {
+            ...state,
+            compareList : [...state.compareList, action.payload],
+            
+        }
 
         case CLEAN :
             return initialState

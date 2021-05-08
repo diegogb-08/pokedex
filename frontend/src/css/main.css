@@ -673,6 +673,15 @@ input:not(:focus):valid ~ .floating-label {
       color: #f05356; }
       .headerComponent .navbar .link p {
         font-weight: bold; }
+  .headerComponent .comparePokemons {
+    height: 90%;
+    width: 10rem;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer; }
+    .headerComponent .comparePokemons .pokeball {
+      height: 100%; }
 
 .pokeCardComponent {
   width: 15rem;
@@ -697,10 +706,71 @@ input:not(:focus):valid ~ .floating-label {
   transition: 0.5s ease all; }
 
 .cardModalContainer {
-  width: 80vw;
+  min-width: 60vw;
   height: 80vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rajdhani", sans-serif; }
+  .cardModalContainer .imgContainer {
+    width: 100%;
+    height: 50%;
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+  .cardModalContainer .check {
+    position: absolute;
+    font-size: 15rem;
+    color: #89d81b;
+    transition: 0.5s ease-in-out;
+    display: none; }
+  .cardModalContainer .whiteShadow {
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    border-radius: 0 0 0.3em 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cardModalContainer .whiteShadow h2 {
+      font-size: 2rem; }
+    .cardModalContainer .whiteShadow .pokeInfo {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; }
+      .cardModalContainer .whiteShadow .pokeInfo .stats {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 10rem; }
+        .cardModalContainer .whiteShadow .pokeInfo .stats h3 {
+          text-align: center;
+          margin: 0;
+          padding: 0; }
+        .cardModalContainer .whiteShadow .pokeInfo .stats ul {
+          list-style-type: none;
+          font-size: 1.5rem; }
+        .cardModalContainer .whiteShadow .pokeInfo .stats .addPokemonToList {
+          margin-top: 2rem;
+          width: 10rem;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .cardModalContainer .whiteShadow .pokeInfo .stats .addPokemonToList p {
+            font-weight: bold;
+            color: white; }
+    .cardModalContainer .whiteShadow .message {
+      color: red;
+      font-size: 1.5rem;
+      font-weight: bold; }
 
 .locationComponent {
   display: flex;
