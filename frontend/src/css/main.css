@@ -673,6 +673,8 @@ input:not(:focus):valid ~ .floating-label {
       color: #f05356; }
       .headerComponent .navbar .link p {
         font-weight: bold; }
+    .headerComponent .navbar .link:hover {
+      color: red; }
   .headerComponent .comparePokemons {
     height: 90%;
     width: 10rem;
@@ -682,6 +684,38 @@ input:not(:focus):valid ~ .floating-label {
     cursor: pointer; }
     .headerComponent .comparePokemons .pokeball {
       height: 100%; }
+  .headerComponent .user {
+    color: #7c7578;
+    margin-right: 0.5rem; }
+  .headerComponent .arrowLogout {
+    padding: 1rem;
+    cursor: pointer;
+    transform: rotate(0deg);
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+  .headerComponent .drowpDown {
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    background-color: white;
+    top: 4rem;
+    right: 12%;
+    border-radius: 0.3em;
+    border: 4px solid #f05356;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer; }
+    .headerComponent .drowpDown p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f05356; }
+    .headerComponent .drowpDown .iconLogout {
+      font-size: 1.5rem;
+      color: #f05356; }
+  .headerComponent .drowpDown:hover {
+    background-color: #f3b8b8; }
 
 .pokeCardComponent {
   width: 15rem;
@@ -738,7 +772,9 @@ input:not(:focus):valid ~ .floating-label {
     flex-direction: column;
     align-items: center; }
     .cardModalContainer .whiteShadow h2 {
-      font-size: 2rem; }
+      font-size: 2rem;
+      margin: 0;
+      padding: 0; }
     .cardModalContainer .whiteShadow .pokeInfo {
       width: 100%;
       height: 100%;
@@ -1006,8 +1042,35 @@ input:not(:focus):valid ~ .floating-label {
         width: 35%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column; }
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-bottom: 2rem; }
+        .battleComponent .battleContainer .battleFieldContainer .battle .pokemonName {
+          margin: 0;
+          padding: 0;
+          color: white;
+          -webkit-text-stroke: 2px black; }
+        .battleComponent .battleContainer .battleFieldContainer .battle .statsCard {
+          height: 45%;
+          width: 100%;
+          border-radius: 0.3em;
+          background-color: #fafafad0;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          box-sizing: border-box;
+          padding: 1rem; }
+          .battleComponent .battleContainer .battleFieldContainer .battle .statsCard .stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            .battleComponent .battleContainer .battleFieldContainer .battle .statsCard .stats h3 {
+              text-align: center;
+              margin: 0;
+              padding: 0; }
+            .battleComponent .battleContainer .battleFieldContainer .battle .statsCard .stats ul {
+              list-style-type: none; }
       .battleComponent .battleContainer .battleFieldContainer .vs {
         height: 100%;
         width: 25%;
@@ -1015,28 +1078,25 @@ input:not(:focus):valid ~ .floating-label {
         align-items: center;
         justify-content: center;
         flex-direction: column; }
-      .battleComponent .battleContainer .battleFieldContainer .statsCard {
-        height: 50%;
-        width: 100%;
-        border-radius: 0.3em;
-        background-color: #fafafad0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        box-sizing: border-box;
-        padding: 1rem; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard .stats {
+        .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle {
+          margin-top: 2rem;
+          min-height: 3rem;
+          width: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard h3 {
-          text-align: center;
-          margin: 0;
-          padding: 0;
-          font-size: 1.5rem; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard ul {
-          list-style-type: none;
-          font-size: 1.5rem; }
+          justify-content: space-evenly; }
+          .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle .buttons {
+            width: 30%;
+            height: 100%; }
+            .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle .buttons p {
+              color: white;
+              font-weight: bold;
+              text-align: center; }
+
+@media screen and (max-width: 900px) {
+  .battleComponent .battleContainer .battleFieldContainer .vs img {
+    width: 100%; }
+  .battleComponent .battleContainer .battleFieldContainer .battle img {
+    width: 100%; } }
 
 /*Fonts and another urls*/

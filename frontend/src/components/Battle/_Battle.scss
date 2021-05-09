@@ -26,8 +26,41 @@
                 width: 35%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
                 flex-direction: column;
+                margin-bottom: 2rem;
+                .pokemonName{
+                    margin: 0;
+                    padding: 0;
+                    color: white;
+                    -webkit-text-stroke: 2px black;
+                }
+                .statsCard{
+                    height: 45%;
+                    width: 100%;
+                    border-radius: $br;
+                    background-color: $transparentWhite;
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    grid-template-rows: repeat(2,1fr);
+                    box-sizing: border-box;
+                    padding: 1rem;
+                    .stats{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        h3{
+                            text-align: center;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        ul {
+                            list-style-type: none;
+    
+                        }
+                    }
+                }
             }
             .vs{
                 height: 100%;
@@ -36,32 +69,40 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-            }
-            .statsCard{
-                height: 50%;
-                width: 100%;
-                border-radius: $br;
-                background-color: $transparentWhite;
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                grid-template-rows: repeat(2,1fr);
-                box-sizing: border-box;
-                padding: 1rem;
-                .stats{
+                .buttonsBattle{
+                    margin-top: 2rem;
+                    min-height: 3rem;
+                    width: 100%;
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-evenly;
+                    .buttons{
+                        width: 30%;
+                        height: 100%;
+                        p{
+                            color: white;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
                 }
-                h3{
-                    text-align: center;
-                    margin: 0;
-                    padding: 0;
-                    font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .battleComponent{
+        .battleContainer{
+            .battleFieldContainer{
+                .vs{
+                    img{
+                        width: 100%;
+                    }
                 }
-                ul {
-                    list-style-type: none;
-                    font-size: 1.5rem;
+                .battle{
+                    img{
+                        width: 100%;
+                    }
                 }
             }
         }
