@@ -8,6 +8,7 @@ const Header = (props) => {
     let history = useHistory();
 
     const [showPokeballs, setShowPokeballs] = useState({})
+    const [color, setColor] = useState({})
 
     useEffect(()=>{
         if(props.compareList.length > 0)
@@ -20,19 +21,30 @@ const Header = (props) => {
         },500)
     }
 
+    const getFirstName = (name) => {
+        const firstName = name.split(' ')
+
+        return firstName[0]
+
+    }
+
+    const setColorLink = (string) => {
+        setColor({[string]:{color: 'red'}});
+    }
+
     return (
         <div className="headerComponent" >
             <div className="navbar" >
-                <Link to={'/home'} className="link" >
+                <Link to={'/home'} className="link" style={color} onClick={()=>setColorLink('home')}>
                     <p>Home</p>
                 </Link>
-                <Link to={'/location'} className="link">
+                <Link to={'/location'} className="link" style={color} onClick={()=>setColorLink('location')}>
                     <p>Location</p>
                 </Link>
-                <Link to={'/color'} className="link">
+                <Link to={'/color'} className="link" style={color} onClick={()=>setColorLink('color')}>
                     <p>Color</p>
                 </Link>
-                <Link to={'/species'} className="link">
+                <Link to={'/species'} className="link" style={color} onClick={()=>setColorLink('species')}>
                     <p>Species</p>
                 </Link>
             </div>
@@ -49,6 +61,9 @@ const Header = (props) => {
                     </>
                 }
             </div>
+            <div className="user">
+                <h2>Welcome, {getFirstName(props.user.fullName)}!</h2>
+            </div>
         </div>
     )
 }
@@ -56,6 +71,7 @@ const Header = (props) => {
 const mapStateToProps = state => {
     return {
         compareList: state.pokemonReducer.compareList,
+        user: state.userReducer.user
     }
 }
 

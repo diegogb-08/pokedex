@@ -27,6 +27,9 @@
                 font-weight: bold;
             }
         }
+        .link:hover{
+            color: red;
+        }
         
     }
     .comparePokemons{
@@ -39,5 +42,8 @@
         .pokeball{
             height: 100%;
         }
+    }
+    .user{
+        color: $fontcolor3;
     }
 }

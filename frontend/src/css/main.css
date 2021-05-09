@@ -673,6 +673,8 @@ input:not(:focus):valid ~ .floating-label {
       color: #f05356; }
       .headerComponent .navbar .link p {
         font-weight: bold; }
+    .headerComponent .navbar .link:hover {
+      color: red; }
   .headerComponent .comparePokemons {
     height: 90%;
     width: 10rem;
@@ -682,6 +684,8 @@ input:not(:focus):valid ~ .floating-label {
     cursor: pointer; }
     .headerComponent .comparePokemons .pokeball {
       height: 100%; }
+  .headerComponent .user {
+    color: #7c7578; }
 
 .pokeCardComponent {
   width: 15rem;

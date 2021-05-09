@@ -105,7 +105,7 @@ const Register = (props) => {
         }
         try {
             let result = await axios.post(PORT, body)
-            console.log(result)
+
             if (result.data) {
 
                 let dataLogin = {
@@ -114,7 +114,7 @@ const Register = (props) => {
                 }
 
                 let resultLogin = await axios.post(PORT+'login', dataLogin)
-                console.log(result)
+
                 if (resultLogin.data) {
                     props.dispatch({type: LOGIN, payload: resultLogin.data});
                     
