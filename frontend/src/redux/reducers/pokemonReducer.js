@@ -24,7 +24,6 @@ const pokemonReducer = (state = initialState, action) => {
         
         case REMOVE:
             const numIndex = parseInt(action.payload)
-            console.log(action.payload)
             return {
                 ...state,
                 compareList: [

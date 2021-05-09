@@ -94,7 +94,6 @@ const Register = (props) => {
 
         const errs = validate(user, "register");
         setErrors(errs);
-        console.log(errs)
     
         if (Object.keys(errs).length > 0) return;
         
