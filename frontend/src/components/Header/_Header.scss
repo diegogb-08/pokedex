@@ -48,6 +48,37 @@
         margin-right: 0.5rem;
     }
     .arrowLogout{
-        
+        padding: 1rem;
+        cursor: pointer;
+        transform: rotate(0deg);
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+    .drowpDown{
+        position: absolute;
+        width: 10rem;
+        height: 3rem;
+        background-color: white;
+        top: 4rem;
+        right: 12%;
+        border-radius: $br;
+        border: 4px solid $fontcolor2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        p{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $fontcolor2;
+        }
+        .iconLogout{
+            font-size: 1.5rem;
+            color: $fontcolor2;
+        }
+    }
+    .drowpDown:hover{
+        background-color: rgb(243, 184, 184);
     }
 }

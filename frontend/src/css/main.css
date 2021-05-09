@@ -687,6 +687,35 @@ input:not(:focus):valid ~ .floating-label {
   .headerComponent .user {
     color: #7c7578;
     margin-right: 0.5rem; }
+  .headerComponent .arrowLogout {
+    padding: 1rem;
+    cursor: pointer;
+    transform: rotate(0deg);
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+  .headerComponent .drowpDown {
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    background-color: white;
+    top: 4rem;
+    right: 12%;
+    border-radius: 0.3em;
+    border: 4px solid #f05356;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer; }
+    .headerComponent .drowpDown p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f05356; }
+    .headerComponent .drowpDown .iconLogout {
+      font-size: 1.5rem;
+      color: #f05356; }
+  .headerComponent .drowpDown:hover {
+    background-color: #f3b8b8; }
 
 .pokeCardComponent {
   width: 15rem;
