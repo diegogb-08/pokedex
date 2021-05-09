@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "Pokedex",
+    "database": "pokedex",
     "host": "localhost",
     "dialect": "mysql"
   },

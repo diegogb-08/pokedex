@@ -97,7 +97,7 @@ const Home = (props) => {
                     <>
                         <div className="progressLoading">
                             <h1>Loading Pokemons...</h1>
-                            <ProgressBar done={getLoadingPercentage(pokemons.length)}/>
+                            <ProgressBar done={getLoadingPercentage(pokemons?.length)}/>
                         </div>
                     </>
 

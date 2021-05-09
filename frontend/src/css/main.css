@@ -1006,8 +1006,9 @@ input:not(:focus):valid ~ .floating-label {
         width: 35%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column; }
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-bottom: 2rem; }
         .battleComponent .battleContainer .battleFieldContainer .battle .pokemonName {
           margin: 0;
           padding: 0;
@@ -1045,14 +1046,17 @@ input:not(:focus):valid ~ .floating-label {
         flex-direction: column; }
         .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle {
           margin-top: 2rem;
-          height: 3rem;
+          min-height: 3rem;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: space-evenly; }
           .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle .buttons {
             width: 30%;
-            height: 100%;
-            background-color: red; }
+            height: 100%; }
+            .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle .buttons p {
+              color: white;
+              font-weight: bold;
+              text-align: center; }
 
 /*Fonts and another urls*/
