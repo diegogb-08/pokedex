@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import pokeball from '../../img/pokeball.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
@@ -64,6 +66,7 @@ const Header = (props) => {
             <div className="user">
                 <h2>Welcome, {getFirstName(props.user.fullName)}!</h2>
             </div>
+            <FontAwesomeIcon icon={faChevronDown} className="arrowLogout"/>
         </div>
     )
 }

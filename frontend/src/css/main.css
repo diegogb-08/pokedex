@@ -685,7 +685,8 @@ input:not(:focus):valid ~ .floating-label {
     .headerComponent .comparePokemons .pokeball {
       height: 100%; }
   .headerComponent .user {
-    color: #7c7578; }
+    color: #7c7578;
+    margin-right: 0.5rem; }
 
 .pokeCardComponent {
   width: 15rem;
