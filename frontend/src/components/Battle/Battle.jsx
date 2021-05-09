@@ -21,6 +21,7 @@ const Battle = (props) => {
                             props.compareList[0] ?
                             <>
                                 <img src={props.compareList[0].sprites.other.dream_world.front_default} alt="" />
+                                <h1 className="pokemonName">{props.compareList[0].name}</h1>
                                 <div className="statsCard">
                                     <div className="stats">
                                         <h3>Abilities:</h3>
@@ -72,12 +73,18 @@ const Battle = (props) => {
                     </div>
                     <div className="vs">
                         <img src={vs} alt="" />
+                        <div className="buttonsBattle">
+                            <div className="buttons"></div>
+                            <div className="buttons"></div>
+                            <div className="buttons"></div>
+                        </div>
                     </div>
                     <div className="battle">
                         {
                             props.compareList[1] ?
                             <>
                                 <img src={props.compareList[1].sprites.other.dream_world.front_default} alt="" />
+                                <h1 className="pokemonName">{props.compareList[1].name}</h1>
                                 <div className="statsCard">
                                     <div className="stats">
                                         <h3>Stats:</h3>

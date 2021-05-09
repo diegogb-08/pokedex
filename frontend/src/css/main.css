@@ -1008,6 +1008,34 @@ input:not(:focus):valid ~ .floating-label {
         align-items: center;
         justify-content: center;
         flex-direction: column; }
+        .battleComponent .battleContainer .battleFieldContainer .battle .pokemonName {
+          margin: 0;
+          padding: 0;
+          color: white;
+          -webkit-text-stroke: 2px black; }
+        .battleComponent .battleContainer .battleFieldContainer .battle .statsCard {
+          height: 45%;
+          width: 100%;
+          border-radius: 0.3em;
+          background-color: #fafafad0;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          box-sizing: border-box;
+          padding: 1rem; }
+          .battleComponent .battleContainer .battleFieldContainer .battle .statsCard .stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+          .battleComponent .battleContainer .battleFieldContainer .battle .statsCard h3 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem; }
+          .battleComponent .battleContainer .battleFieldContainer .battle .statsCard ul {
+            list-style-type: none;
+            font-size: 1.5rem; }
       .battleComponent .battleContainer .battleFieldContainer .vs {
         height: 100%;
         width: 25%;
@@ -1015,28 +1043,16 @@ input:not(:focus):valid ~ .floating-label {
         align-items: center;
         justify-content: center;
         flex-direction: column; }
-      .battleComponent .battleContainer .battleFieldContainer .statsCard {
-        height: 50%;
-        width: 100%;
-        border-radius: 0.3em;
-        background-color: #fafafad0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        box-sizing: border-box;
-        padding: 1rem; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard .stats {
+        .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle {
+          margin-top: 2rem;
+          height: 3rem;
+          width: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard h3 {
-          text-align: center;
-          margin: 0;
-          padding: 0;
-          font-size: 1.5rem; }
-        .battleComponent .battleContainer .battleFieldContainer .statsCard ul {
-          list-style-type: none;
-          font-size: 1.5rem; }
+          justify-content: space-evenly; }
+          .battleComponent .battleContainer .battleFieldContainer .vs .buttonsBattle .buttons {
+            width: 30%;
+            height: 100%;
+            background-color: red; }
 
 /*Fonts and another urls*/
