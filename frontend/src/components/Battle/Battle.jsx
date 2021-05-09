@@ -29,6 +29,12 @@ const Battle = (props) => {
         // eslint-disable-next-line
     },[props.compareList])
 
+    useEffect(()=>{
+        if(props.token === '')
+            history.push('/')
+        // eslint-disable-next-line
+    },[props.token])
+
     return (
         <div className="battleComponent">
             <div className="battleContainer">
@@ -94,7 +100,7 @@ const Battle = (props) => {
                         }
                     </div>
                     <div className="vs">
-                        <img src={vs} alt="" />
+                        <img src={vs} alt="vs" />
                         <div className="buttonsBattle">
                             <div className="buttons">
                                 <Button onClick={()=>clearPokemon(0)} >
@@ -103,7 +109,7 @@ const Battle = (props) => {
                             </div>
                             <div className="buttons">
                                 <Button onClick={()=>clearPokemon(null)} >
-                                    <p>CLEAR <br />POKEMONS</p>
+                                    <p>CLEAR</p>
                                 </Button>
                             </div>
                             <div className="buttons">
@@ -184,6 +190,7 @@ const Battle = (props) => {
 const mapStateToProps = state => {
     return {
         compareList: state.pokemonReducer.compareList,
+        token: state.userReducer.token
     }
 }
 

@@ -9,8 +9,11 @@ import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-r
 import ProgressBar from '../ProgressBar/ProgressBar'
 import CardModal from '../CardModal/CardModal'
 import PokeCard from '../PokeCard/PokeCard'
+import { useHistory } from 'react-router'
 
 const Location = (props) => {
+
+    let history = useHistory()
 
 
     const [filter, setFilter] = useState({
@@ -37,6 +40,12 @@ const Location = (props) => {
             },2000)
         // eslint-disable-next-line
     },[pokemons])
+
+    useEffect(()=>{
+        if(props.token === '')
+            history.push('/')
+        // eslint-disable-next-line
+    },[props.token])
 
 
     const getLocations = async () => {
@@ -156,6 +165,7 @@ const Location = (props) => {
 const mapStateToProps = state => {
     return {
       pokeList: state.pokemonReducer.pokeList,
+      token: state.userReducer.token
     }
 }
 

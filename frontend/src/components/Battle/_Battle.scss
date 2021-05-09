@@ -50,16 +50,15 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                    }
-                    h3{
-                        text-align: center;
-                        margin: 0;
-                        padding: 0;
-                        font-size: 1.5rem;
-                    }
-                    ul {
-                        list-style-type: none;
-                        font-size: 1.5rem;
+                        h3{
+                            text-align: center;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        ul {
+                            list-style-type: none;
+    
+                        }
                     }
                 }
             }
@@ -85,6 +84,24 @@
                             font-weight: bold;
                             text-align: center;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .battleComponent{
+        .battleContainer{
+            .battleFieldContainer{
+                .vs{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .battle{
+                    img{
+                        width: 100%;
                     }
                 }
             }

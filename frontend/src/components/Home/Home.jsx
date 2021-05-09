@@ -10,8 +10,11 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
+import { useHistory } from 'react-router';
 
 const Home = (props) => {
+
+    let history = useHistory()
 
     const [pokemons, setPokemons] = useState([])
     const [loading, setLoading] = useState(false)
@@ -36,6 +39,12 @@ const Home = (props) => {
             },2000)
         // eslint-disable-next-line
     },[pokemons])
+
+    useEffect(()=>{
+        if(props.token === '')
+            history.push('/')
+        // eslint-disable-next-line
+    },[props.token])
 
 
 
@@ -123,6 +132,7 @@ const Home = (props) => {
 const mapStateToProps = state => {
     return {
       pokeList: state.pokemonReducer.pokeList,
+      token: state.userReducer.token
     }
 }
 
