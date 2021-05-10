@@ -28,10 +28,12 @@ const Header = (props) => {
 
 
     const getFirstName = (name) => {
+
+        if(props.user.fullName){
         const firstName = name.split(' ')
 
         return firstName[0]
-
+        }
     }    
 
     const openDropDown = () => {
