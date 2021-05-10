@@ -48,16 +48,4 @@ router.post('/login', async(req, res) => {
 });
 
 
-router.put('/:id', auth, async(req, res) => {
-    try{
-        const id = req.params.id;
-        const user = await clientController.updateUser(id, req.body)
-        res.json(user)
-    }catch (error){
-        return res.status(500).json({
-            message: error.message
-        });
-    }
-})
-
 module.exports = router;
