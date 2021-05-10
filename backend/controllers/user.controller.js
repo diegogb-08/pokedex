@@ -41,13 +41,6 @@ class Users {
         return {user, token}
     }
 
-    // PUT - Update a User
-
-    async updateUser(id, update) {
-        const user = await User.findOne({where: {id}})
-        return await user.update(update);
-    }
-
 };
 
 let userController = new Users();
